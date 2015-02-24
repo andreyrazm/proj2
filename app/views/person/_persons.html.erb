@@ -1,0 +1,32 @@
+
+<table class="table  table-striped table-hover table-condensed">
+  <tr class="info">
+    <th><%= sortable 'id' %></th>
+    <th><%= sortable 'wmid', 'WMID' %></th>
+    <th><%= sortable 'name', 'Имя' %></th>
+    <th><%= sortable 'lvl', 'Бизнес уровень' %></th>
+    <th><%= sortable 'date', 'Дата регистрации'%></th>
+    <th><%= sortable 'att', 'Аттестат'%></th>
+    <th><%= sortable 'review', 'Отзывы'%></th>
+    <th></th>
+  </tr>
+  <% @persons.each do |p| %>
+      <tr id="<%=p.id %>">
+        <td> <%= p.id %></td>
+        <td> <%= p.wmid %></td>
+        <td> <%= p.name %></td>
+        <td> <%= p.lvl %></td>
+        <td> <%= p.date %></td>
+        <td class="text-capitalize"><a id="<%= p.attestate_id %>" class="att"><%=@att.find(p.attestate_id).attname%></a></td>
+        <% if p.review=='0/0' %>
+            <td><%= p.review %></td>
+        <% else %>
+            <td ><a class="tip"> <%= p.review %><span class="classic"><%= p.rdate %></span></a></td>
+        <%end%>
+        <td><%= link_to 'Удалить', person_path(p), method: :delete, class:'del' %></td>
+
+
+      </tr>
+  <%end%>
+</table>
+<%= will_paginate @persons%>
