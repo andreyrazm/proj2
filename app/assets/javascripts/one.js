@@ -13,13 +13,4 @@ $(function(){
         $("#att").val(this.id);
     });
 
-
-    //
-    // $(document).on('submit', '#persons_search', function () {
-    //     $.get(this.action, $(this).serialize(), null, "script");
-    //     return false;
-//
-    // } );
-
-
 });
