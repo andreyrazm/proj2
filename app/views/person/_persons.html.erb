@@ -1,7 +1,7 @@
 
 <table class="table  table-striped table-hover table-condensed">
   <tr class="info">
-    <th><%= sortable 'id' %></th>
+
     <th><%= sortable 'wmid', 'WMID' %></th>
     <th><%= sortable 'name', 'Имя' %></th>
     <th><%= sortable 'lvl', 'Бизнес уровень' %></th>
@@ -12,7 +12,7 @@
   </tr>
   <% @persons.each do |p| %>
       <tr id="<%=p.id %>">
-        <td> <%= p.id %></td>
+
         <td> <%= p.wmid %></td>
         <td> <%= p.name %></td>
         <td> <%= p.lvl %></td>

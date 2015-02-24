@@ -9,8 +9,12 @@ $(function(){
     });
 
 
-    $(".att").click(function(){
+    $(document).on('click',".att", function(){
+
         $("#att").val(this.id);
+
+        return false;
     });
+
 
 });
