@@ -16,5 +16,11 @@ $(function(){
         return false;
     });
 
+    $(document).on('ajax:success',"#persons_new", function(){
+        $('#new').val('');
+       
+
+    });
+
 
 });
