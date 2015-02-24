@@ -4,7 +4,7 @@ class PersonController < ApplicationController
 
   def index
      params[:sort] ||= 'name'
-    #Проверка надо ли добавить wmid или кошелёк
+    # Проверка надо ли добавить wmid или кошелёк
     if params[:new]!=nil and params[:new].size==12
       parse_wmid('<request><wmid>' + params[:new] + '</wmid></request>')
       params[:new]=nil
