@@ -27,8 +27,7 @@ class PersonController < ApplicationController
 
   private
     def parse_wmid(z)
-    require 'rest_client'
-    require 'nokogiri'
+
     res=RestClient.post 'https://passport.webmoney.ru/xml/XMLGetWMIDInfo.aspx', z
     xm = Nokogiri::XML(res)
 
@@ -50,7 +49,7 @@ class PersonController < ApplicationController
     name =xm.root.at_xpath('certinfo/userinfo/value/row')['fname'] + ' ' + xm.root.at_xpath('certinfo/userinfo/value/row')['iname'] + ' ' + xm.root.at_xpath('certinfo/userinfo/value/row')['oname']
     review= xm.root.at_xpath('certinfo/claims/row')['posclaimscount'] + '/' + xm.root.at_xpath('certinfo/claims/row')['negclaimscount']
     rdate= to_date(xm.root.at_xpath('certinfo/claims/row')['claimslastdate'])
-    Person.create(wmid: wmid,attestate_id:attestate_id, lvl: lvl, date:date, name: name, review:review, rdate:rdate)
+    Person.create(wmid: wmid,attestate_id: attestate_id, lvl: lvl, date:date, name: name, review:review, rdate:rdate)
 
     end
   def sort_column

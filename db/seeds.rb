@@ -8,5 +8,5 @@
 #Attestate.create(attname:"vau")
 #Person.create(wmid: 000000, name: "Андрей", lvl: 10, date: "19.06.1999", att: "formal", review:"ff", attestate_id: 1 )
 #Person.create(wmid: 123456, name: "Andrei Razdm", lvl: 10, date: "19.06.1999", att: "formal", review:"ff")
-#Person.create(wmid: 111111, name: "fdfdaf", lvl: 103, date: "19.10.1999", att: "formal", review:"fdddf")
+#Person.create(wmid: 250856563564, name: "", lvl: 103, date: "19.10.1999", att: "", review:"fdddf")
 

@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20150219111008) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.belongs_to :attestate, index: true
-    t.integer "wmid", :limit => 8
+    t.integer "attestate_id"
+    t.integer "wmid",         limit: 8
     t.string  "name"
     t.integer "lvl"
     t.string  "date"

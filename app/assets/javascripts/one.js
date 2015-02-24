@@ -18,7 +18,7 @@ $(function(){
 
     $(document).on('ajax:success',"#persons_new", function(){
         $('#new').val('');
-       
+
 
     });
 
