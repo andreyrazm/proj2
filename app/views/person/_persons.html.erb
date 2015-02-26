@@ -16,12 +16,12 @@
         <td> <%= p.wmid %></td>
         <td> <%= p.name %></td>
         <td> <%= p.lvl %></td>
-        <td> <%= p.date %></td>
-        <td class="text-capitalize"><a id="<%= p.attestate_id %>" class="att"><%=@att.find(p.attestate_id).attname%></a></td>
+        <td> <%= Russian::strftime(p.date , '%d %B %Y')%></td>
+        <td class="text-capitalize"><a id="<%= p.attestate_id %>" class="att"><%=p.attestate.attname%></a></td>
         <% if p.review=='0/0' %>
             <td><%= p.review %></td>
         <% else %>
-            <td ><a class="tip"> <%= p.review %><span class="classic"><%= p.rdate %></span></a></td>
+            <td ><a class="tip"> <%= p.review %><span class="classic"><%= Russian::strftime(p.rdate , '%d %B %Y') %></span></a></td>
         <%end%>
         <td><%= link_to 'Удалить', person_path(p), method: :delete, class:'del' %></td>
 

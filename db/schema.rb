@@ -18,14 +18,14 @@ ActiveRecord::Schema.define(version: 20150219111008) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.integer "attestate_id"
-    t.integer "wmid",         limit: 8
-    t.string  "name"
-    t.integer "lvl"
-    t.string  "date"
-    t.string  "att"
-    t.string  "review"
-    t.string  "rdate"
+    t.integer  "attestate_id"
+    t.integer  "wmid",         limit: 8
+    t.string   "name"
+    t.integer  "lvl"
+    t.datetime "date"
+    t.string   "att"
+    t.string   "review"
+    t.datetime "rdate"
   end
 
 end

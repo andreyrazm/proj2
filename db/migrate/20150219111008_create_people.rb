@@ -10,10 +10,10 @@ class CreatePeople < ActiveRecord::Migration
       t.integer :wmid, :limit => 8
       t.string :name
       t.integer :lvl
-      t.string :date
+      t.datetime :date
       t.string :att
       t.string :review
-      t.string :rdate
+      t.datetime :rdate
     end
   end
 end
