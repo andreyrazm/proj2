@@ -23,7 +23,7 @@
         <% else %>
             <td ><a class="tip"> <%= p.review %><span class="classic"><%= Russian::strftime(p.rdate , '%d %B %Y') %></span></a></td>
         <%end%>
-        <td><%= link_to 'Удалить', person_path(p), method: :delete, class:'del' %></td>
+        <td><%= link_to 'Удалить', person_path(p), method: :delete, remote:true, class:'del' %></td>
 
 
       </tr>

@@ -17,9 +17,15 @@ $(function(){
     });
 
     $(document).on('ajax:success',"#persons_new", function(){
+
         $('#new').val('');
+    });
 
+    $(document).on('ajax:complete',".del", function(){
 
+        $.getScript('/person?direction=asc&amp;sort=name');
+
+        return false;
     });
 
 
